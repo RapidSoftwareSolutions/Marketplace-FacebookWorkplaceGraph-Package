@@ -1,0 +1,642 @@
+{
+  "package": "FacebookWorkplaceGraph",
+  "tagline": "Facebook Workplace Graph API",
+  "description": "Workplace provides an Account Management API for managing user accounts and a Graph API for managing groups membership, and content that exists within your instance.",
+  "image": "https://logo.clearbit.com/work.facebook.com",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-FacebookWorkplaceGraph-Package",
+  "keywords": [
+    "API",
+    "work",
+    "facebook",
+    "team"
+  ],
+  "accounts": {
+    "domain": "work.facebook.com",
+    "credentials": [
+      "accessToken"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getSingleCommunity",
+      "description": "Get main information about community",
+      "args": [
+        {
+        "name": "accessToken",
+        "type": "credentials",
+        "info": "The api key obtained from Facebook Workplace",
+        "required": true
+        },
+        {
+          "name": "communityId",
+          "type": "String",
+          "info": "Community id",
+          "required": true
+        }
+        ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getCommunityGroups",
+      "description": "Get a list of all groups for a community",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "communityId",
+          "type": "String",
+          "info": "Community id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getCommunityMembers",
+      "description": "Get a list of all members for a community",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "communityId",
+          "type": "String",
+          "info": "Community id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "addGroupToCommunity",
+      "description": "Add a new group to a community",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "communityId",
+          "type": "String",
+          "info": "Community id",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Group name",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "info": "Group description",
+          "required": true
+        },
+        {
+          "name": "privacy",
+          "type": "String",
+          "info": "Group privacy. OPEN or CLOSED. Default CLOSED",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSingleGroup",
+      "description": "Get main information about group",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getGroupMembers",
+      "description": "Get group members",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getGroupDocs",
+      "description": "Get group docs",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getGroupPosts",
+      "description": "Get group posts",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "addMemberToGroup",
+      "description": "Add a member to a group",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "User email",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteMemberFromGroup",
+      "description": "Remove a member from a group. Removing the last member from a group will schedule that group for deletion.",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "User email",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "setMemberAsGroupAdmin",
+      "description": "Promote a member to admin of a group",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "User id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "unsetGroupAdmin",
+      "description": "Demote an admin to member of a group",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "User id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createGroupEvent",
+      "description": "Create a new Event in a group",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Event name",
+          "required": true
+        },
+        {
+          "name": "start_time",
+          "type": "String",
+          "info": "Event start time. Date format: YYYY-MM-DDTHH:mm:SS",
+          "required": true
+        },
+        {
+          "name": "end_time",
+          "type": "String",
+          "info": "Event end time. Date format: YYYY-MM-DDTHH:mm:SS",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "info": "Event description",
+          "required": true
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "info": "Event location",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getPostComments",
+      "description": "Get the comments from a post",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "postId",
+          "type": "String",
+          "info": "Post id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSinglePost",
+      "description": "Get post main content",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "postId",
+          "type": "String",
+          "info": "Post id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "createGroupPost",
+      "description": "Post into a group",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        },
+        {
+          "name": "message",
+          "type": "String",
+          "info": "Message text",
+          "required": true
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "info": "Post link",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "tagUserInGroupPost",
+      "description": "Tag a user in a group post",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "groupId",
+          "type": "String",
+          "info": "Group id",
+          "required": true
+        },
+        {
+          "name": "message",
+          "type": "String",
+          "info": "Tagged text. Example: Hi+@[100013325822531]",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getSingleMember",
+      "description": "Get main information about member",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Member id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getMemberConversations",
+      "description": "Get conversations for a member including messages and attachments",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Member id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deleteMemberInboxMessage",
+      "description": "Delete a specific message in a member's inbox (requires a member's impersonate token)",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Member id",
+          "required": true
+        },
+        {
+          "name": "messageId",
+          "type": "String",
+          "info": "Message id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getMemberEvents",
+      "description": "Get a member's events",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "memberId",
+          "type": "String",
+          "info": "Member id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    }
+  ]
+}
