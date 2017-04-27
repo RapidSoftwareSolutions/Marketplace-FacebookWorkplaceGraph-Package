@@ -1,4 +1,4 @@
-[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/GoogleFlightsAPI/functions?utm_source=RapidAPIGitHub_GoogleFlightsFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/FacebookWorkplaceGraph/functions?utm_source=RapidAPIGitHub_FacebookWorkplaceGraphFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
 # FacebookWorkplaceGraph Package
 Workplace provides an Account Management API for managing user accounts and a Graph API for managing groups membership, and content that exists within your instance.
 * Domain: [work.facebook.com](https://rapidapi.facebook.com/)
