@@ -126,8 +126,9 @@
         },
         {
           "name": "privacy",
-          "type": "String",
-          "info": "Group privacy. OPEN or CLOSED. Default CLOSED",
+          "type": "Select",
+          "options": ["OPEN","CLOSED","SECRET"],
+          "info": "The privacy setting of the group. Possible values: OPEN, CLOSED, SECRET. Default CLOSED",
           "required": false
         }
       ],
@@ -387,14 +388,14 @@
         },
         {
           "name": "start_time",
-          "type": "String",
-          "info": "Event start time. Date format: YYYY-MM-DDTHH:mm:SS",
+          "type": "DatePicker",
+          "info": "Event start time.",
           "required": true
         },
         {
           "name": "end_time",
-          "type": "String",
-          "info": "Event end time. Date format: YYYY-MM-DDTHH:mm:SS",
+          "type": "DatePicker",
+          "info": "Event end time.",
           "required": true
         },
         {
