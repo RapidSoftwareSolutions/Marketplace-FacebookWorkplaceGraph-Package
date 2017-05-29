@@ -4,7 +4,7 @@ $app->post('/api/FacebookWorkplaceGraph/createGroupEvent', function ($request, $
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['accessToken','groupId', 'name', 'start_time', 'end_time', 'description', 'location']);
+    $validateRes = $checkRequest->validate($request, ['accessToken','groupId', 'name', 'startTime', 'endTime', 'description', 'location']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -23,11 +23,11 @@ $app->post('/api/FacebookWorkplaceGraph/createGroupEvent', function ($request, $
     $data['description'] = $post_data['args']['description'];
     $data['location'] = $post_data['args']['location'];
 
-    $strTime =  strtotime($post_data['args']['start_time']);
-    $data['start_time'] = date('c',$strTime);
+    $strTime =  strtotime($post_data['args']['startTime']);
+    $data['startTime'] = date('c',$strTime);
 
-    $strTime =  strtotime($post_data['args']['end_time']);
-    $data['end_time'] = date('c',$strTime);
+    $strTime =  strtotime($post_data['args']['endTime']);
+    $data['endTime'] = date('c',$strTime);
 
 
     try {

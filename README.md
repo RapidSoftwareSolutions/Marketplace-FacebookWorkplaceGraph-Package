@@ -44,7 +44,7 @@ Add a new group to a community.
 | communityId| String     | Community id
 | name       | String     | The name of the group to be created.
 | description| String     | Group description
-| privacy    | Select     | The privacy setting of the group. Possible values: ```OPEN```, ```CLOSED```, ```SECRET```. Default ```CLOSED```
+| privacy    | String     | The privacy setting of the group. Possible values: ```OPEN```, ```CLOSED```, ```SECRET```. Default ```CLOSED```
 
 ## FacebookWorkplaceGraph.getSingleGroup
 Get main information about group.
@@ -122,8 +122,8 @@ Create a new Event in a group.
 | accessToken| credentials| The api key obtained from Facebook Workplace
 | groupId    | String     | Group id
 | name       | String     | Event name
-| start_time | DatePicker     | Event start time. Date format: ```YYYY-MM-DDTHH:mm:SS```
-| end_time   | DatePicker     | Event end time. Date format: ```YYYY-MM-DDTHH:mm:SS```
+| startTime | DatePicker     | Event start time. Date format: ```YYYY-MM-DDTHH:mm:SS```
+| endTime   | DatePicker     | Event end time. Date format: ```YYYY-MM-DDTHH:mm:SS```
 | description| String     | Event description
 | location   | String     | Event location
 
