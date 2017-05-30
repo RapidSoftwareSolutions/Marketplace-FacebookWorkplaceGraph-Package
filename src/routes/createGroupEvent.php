@@ -23,11 +23,11 @@ $app->post('/api/FacebookWorkplaceGraph/createGroupEvent', function ($request, $
     $data['description'] = $post_data['args']['description'];
     $data['location'] = $post_data['args']['location'];
 
-    $strTime =  strtotime($post_data['args']['start_time']);
-    $data['startTime'] = date('c',$strTime);
+    $strTime =  strtotime($post_data['args']['startTime']);
+    $data['start_time'] = date('c',$strTime);
 
-    $strTime =  strtotime($post_data['args']['end_time']);
-    $data['endTime'] = date('c',$strTime);
+    $strTime =  strtotime($post_data['args']['endTime']);
+    $data['end_time'] = date('c',$strTime);
 
 
     try {
