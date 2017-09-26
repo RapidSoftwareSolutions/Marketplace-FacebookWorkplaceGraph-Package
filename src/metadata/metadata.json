@@ -20,6 +20,13 @@
       "accessToken"
     ]
   },
+  "steps": [
+    "In the Company Dashboard, open the Integrations tab",
+    "Click on the Create App button",
+    "Choose a relevant name and description for the app",
+    "Choose the required permissions for the app, based on the integration functionality you require",
+    "Copy and safely store the access token that's shown to you"
+  ],
   "blocks": [
     {
       "name": "getSingleCommunity",
